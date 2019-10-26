@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hola mundo con Vue.js</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="app" class="container mt-5">
+    <h1>{{titulo}}</h1>
+    <br>
+
+    <input type="text" v-model="nuevaFruta" placeholder="Nombre fruta" @keyup.enter="fnAddFruta">
+    <input type="number" v-model="cantNuevaFruta" placeholder="Cantidad fruta">
+    <button @click="fnAddFruta">Agregar</button>
+    <ul>
+      <li v-for="fruta of frutas" style="margin-top: .5rem;">
+        <span>
+          <b>Name:</b> {{fruta.name}}
+        </span> <br>
+        <span v-if="fruta.cantidad > 0">
+          <b>Can tidad:</b> {{fruta.cantidad}} &nbsp;&nbsp;
+        </span>
+        <span v-if="fruta.cantidad === 0">
+          <b>- Sin stock -</b>
+        </span>
+
+        <button @click="fruta.cantidad++">+</button> &nbsp;&nbsp;
+        <button @click="fruta.cantidad--" v-if="fruta.cantidad > 0">-</button>
+
+
+        <br> <input style="margin-top: .5rem;" type="number" v-model.number="fruta.cantidad"
+          placeholder="Change quantity fruit">
+      </li>
+    </ul>
+
+    <br>
+    <h4 v-bind:title="descriptionTotalFruits"><b>Total:</b> {{fnSumarFrutas}} </h4>
+
+    <div  :class="['p-3', 'text-white', background]">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure natus eius quo quisquam, tenetur animi similique
+      odit, quos consequuntur expedita, explicabo dicta doloribus optio commodi rem suscipit cumque est esse?
+    </div>
+
+    <input type="text" class="form-control my-3" v-model="background">
+
+
+    <div class="text-white p-3 mb-5" :class="{'bg-info': color, 'bg-success': !color}">
+      <button @click="color = !color" class="btn btn-dark">Change color</button>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./01.js"></script>
+</body>
+
+</html>

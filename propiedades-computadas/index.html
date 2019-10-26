@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Propiedades computadas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="app" class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <span class="font-weight-bolder">Original message:</span> {{message}} <br>
+        <span class="font-weight-bolder">Reverse message: </span> {{cmpReversedMessage}} <br>
+      </div>
+      <div class="col-12 mt-3">
+        <input class="form-control" style="width: 100%;" type="text" v-model="message">
+      </div>
+      <div class="col-12 pt-1">
+        <hr>
+      </div>
+      <div class="col-12 pt-1">
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" :style="{'width': contador+'%'}" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100" :class="cmpColor">{{contador}}%</div>
+        </div>
+      </div>
+      <div class="col-12 pt-2">
+        <button class="btn btn-danger" @click="fnDecrease">-</button>
+        <button class="btn btn-primary" @click="fnIncrease">+</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
