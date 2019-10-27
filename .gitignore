@@ -6,7 +6,8 @@
 
 practica-1/node_modules/
 practica-1/dist/
-practica-1/npm-debug.log
-practica-1/yarn-error.log
+
+vue-route/node_modules/
+vue-route/dist/
 
 # End of https://www.gitignore.io/api/vuejs
