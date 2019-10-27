@@ -13,7 +13,7 @@ Vue.component('padre', {
                   </span>
                </li>
             </ul>
-            <button type="button" class="btn btn-primary" @click="getCursos">Obtener cursos</button>
+           <!-- <button type="button" class="btn btn-primary" @click="getCursos">Obtener cursos</button> -->
          </div>
       </div>`,
    computed: {
@@ -21,6 +21,9 @@ Vue.component('padre', {
    },
    methods: {
       ...Vuex.mapActions(['getCursos'])
+   },
+   mounted() {
+      this.getCursos();
    },
 });
 
