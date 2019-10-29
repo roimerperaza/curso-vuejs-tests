@@ -10,4 +10,7 @@ practica-1/dist/
 vue-route/node_modules/
 vue-route/dist/
 
+bootstrap-vuejs/node_modules/
+bootstrap-vuejs/dist/
+
 # End of https://www.gitignore.io/api/vuejs
