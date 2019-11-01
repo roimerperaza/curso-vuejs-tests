@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar :menu="arrayMenu" />
+    <Navbar :menu="arrayMenu" :nameMenu="nameMenu" />
     <!-- ROUTER VIEW -->
     <b-container>
       <router-view />
@@ -32,10 +32,15 @@ export default {
           route: "grid"
         },
         {
-          name: "Card",
+          name: "Cards",
           route: "card"
+        },
+        {
+          name: "Forms",
+          route: "forms"
         }
-      ]
+      ],
+      nameMenu: "AppVue"
     };
   }
 };
