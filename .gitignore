@@ -10,6 +10,9 @@ practica-1/dist/
 vue-route/node_modules/
 vue-route/dist/
 
+axios-dollar/node_modules/
+axios-dollar/dist/
+
 bootstrap-vuejs/node_modules/
 bootstrap-vuejs/dist/
 
