@@ -13,6 +13,9 @@ vue-route/dist/
 axios-dollar/node_modules/
 axios-dollar/dist/
 
+vuetify/node_modules/
+vuetify/dist/
+
 bootstrap-vuejs/node_modules/
 bootstrap-vuejs/dist/
 
